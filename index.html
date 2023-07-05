@@ -3,7 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <title>App Quản Lý Học Viên</title>
   </head>
-  <body></body>
+  <body>
+    <section id="form-input-data">
+      <h2><center>Thông tin học viên</center></h2>
+      <form>
+        <div class="fullName form-input">
+          <label for="student-name">Họ và Tên</label>
+          <input
+            type="text"
+            id="student-name"
+            name="student-name"
+            placeholder="vui lòng nhập tên"
+            required
+          />
+        </div>
+        <div class="email form-input">
+          <label for="student-email">Email</label>
+          <input
+            type="email"
+            id="student-email"
+            name="student-email"
+            placeholder="vui lòng nhập email"
+          />
+        </div>
+        <div class="phoneNumber form-input">
+          <label for="student-phoneNumber">Số điện thoại</label>
+          <input
+            type="text"
+            placeholder="vui lòng nhập số điện thoại"
+            id="student-phoneNumber"
+            name="student-phoneNumber"
+          />
+        </div>
+        <div class="address form-input">
+          <label for="student-address">Quê quán</label>
+          <input
+            type="text"
+            placeholder="vui lòng nhập địa chỉ quê quán"
+            id="student-address"
+            required
+          />
+        </div>
+        <div class="gender form-input">
+          <p>Giới tính</p>
+          <input type="radio" name="gender" id="male" value="Nam" checked />
+          <label for="male">Nam</label>
+          <input type="radio" name="gender" id="female" value="Nữ" />
+          <label for="female">Nữ</label>
+        </div>
+        <button id="btn-save-data">Lưu lại</button>
+      </form>
+    </section>
+    <section id="form-output-data">
+      <h2><center>Danh sách học viên</center></h2>
+
+      <form class="search-student">
+        <label for="student-search-data">Tìm kiếm tên học viên</label>
+        <input type="text" id="student-search-data" />
+        <button id="btn-search-student">search</button>
+        <button id="btn-return">Quay lại</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Gender</th>
+            <th>Hành động</th>
+            <th><button>sắp xếp (alpha b)</button></th>
+          </tr>
+        </thead>
+        <tbody class="student-infos"></tbody>
+      </table>
+    </section>
+    <script src="./index.js"></script>
+  </body>
 </html>
